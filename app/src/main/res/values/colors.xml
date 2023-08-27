@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="my_primary">#FF24D3FE</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="grey">#FF808080</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="yellow">#f1c40f</color>
+    <color name="green">#27AE60</color>
+    <color name="light_purple">#E8E1E7</color>
+    <color name="light_green">#50d050</color>
+    <color name="dark_green">#008000</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#055047</color>
+
+    <color name="default_tstamp_color_rcv">#f4f4f6</color>
+    <color name="default_tstamp_color_send">#0a0606</color>
+
+    <color name="default_message_color_rcv">#f6f4f4</color>
+    <color name="default_message_color_send">#131212</color>
+
+    <color name="default_bubble_color_rcv">#302020</color>
+    <color name="default_bubble_color_send">#aaa</color>
+</resources>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECE5DD"
+    tools:context=".ChatView">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="#075e54"
+        app:titleTextColor="@color/white"
+        android:id="@+id/toolbar">
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatMessagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:paddingBottom="50dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/textsend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#ECE5DD"
+        android:clickable="true"
+        >
+
+        <EditText
+            android:id="@+id/textinput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/textSendButton"
+            android:ems="10"
+            android:imeOptions="flagNoExtractUi|actionSend"
+            android:inputType="textShortMessage|textMultiLine|textCapSentences"
+            android:minHeight="48dp"
+            android:minLines="1"
+            android:maxLines="4"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/messagebackgroun"
+            android:textColor="@color/black"
+            android:textColorHint="#2B2828"
+            android:hint="Message"
+            android:singleLine="false">
+
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/textSendButton"
+            android:padding="10dp"
+            android:background="@drawable/circle_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_send_24"
+            android:contentDescription="@string/send_message" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/snackbar"
+        android:layout_above="@id/textsend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/snackbar"
+        android:minHeight="48dp"
+        >
+
+        <TextView
+            android:id="@+id/snackbar_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#faffffff"
+            android:textSize="15dp"
+            android:text="This user wants to subscribe to your online status."
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/snackbar_message"
+            android:paddingHorizontal="60dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/snackbar_action_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="16dp"
+
+            android:paddingTop="16dp"
+            android:textAllCaps="true"
+            android:text="Accept"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/snackbar_action_deny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="16dp"
+
+            android:paddingTop="16dp"
+            android:textAllCaps="true"
+            android:text="Deny"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/snackbar_stranger"
+        android:layout_above="@id/textsend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/snackbar"
+        android:minHeight="38dp"
+        >
+
+        <TextView
+            android:id="@+id/snackbar_message_stranger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#faffffff"
+            android:textSize="15dp"
+            android:text="This contact is a stranger."
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@id/snackbar_message_stranger"
+            android:orientation="horizontal"
+            android:paddingHorizontal="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/snackbar_action_accept_stranger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_alignParentStart="true"
+                android:paddingEnd="20dp"
+                android:textAllCaps="true"
+                android:text="Add Contact"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/snackbar_action_deny_stranger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="true"
+                android:text="block"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
