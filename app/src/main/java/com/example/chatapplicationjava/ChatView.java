@@ -71,7 +71,6 @@ public class ChatView extends AppCompatActivity implements ChatMessagesAdapter.O
                 toolbar =findViewById(R.id.toolbar);
                 setSupportActionBar(toolbar);
                 getSupportActionBar().setTitle(counterpartJid.split("@")[0]);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
                 chatMessagesRecyclerView =  findViewById(R.id.chatMessagesRecyclerView);
                 chatMessagesRecyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext()));

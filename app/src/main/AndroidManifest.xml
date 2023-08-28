@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name=".ChatView"
-            android:exported="true"
+            android:exported="false"
             android:parentActivityName=".ChatListActivity" />
         <activity
             android:name=".ContactList"
@@ -48,7 +48,7 @@
         <activity
             android:name=".ContactDetailsActivity"
             android:label="@string/title_me_activity"
-            android:parentActivityName=".ChatView" />
+             />
     </application>
 
 </manifest>
