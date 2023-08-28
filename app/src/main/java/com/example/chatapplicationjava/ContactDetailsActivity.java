@@ -45,7 +45,6 @@ public class ContactDetailsActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(contactJid.split("@")[0]);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         pendingFrom = findViewById(R.id.pending_from);
         pendingTo = findViewById(R.id.pending_to);
