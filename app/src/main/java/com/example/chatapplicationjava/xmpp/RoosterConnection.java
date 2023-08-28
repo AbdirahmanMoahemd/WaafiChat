@@ -150,9 +150,10 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
                     conf = XMPPTCPConnectionConfiguration.builder()
                             .setUsernameAndPassword(mUsername, mPassword)
                             .setXmppDomain(mServiceName)
+                            .setHost(mServiceName)
                             .setPort(5222)
-                            .setKeystoreType(null)
                             .setSendPresence(true)
+                            .setSecurityMode(ConnectionConfiguration.SecurityMode.ifpossible)
                             .build();
 
                     XMPPTCPConnection.setUseStreamManagementDefault(true);
@@ -338,7 +339,7 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
         }
 
         try {
-            mRoster.createEntry(jid.asBareJid(),"",null);
+            mRoster.createItem(jid.asBareJid(),"",null);
         } catch (SmackException.NotLoggedInException e) {
             e.printStackTrace();
             return false;
@@ -480,6 +481,10 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
             e.printStackTrace();
             return false;
         } catch (InterruptedException e) {
+            e.printStackTrace();
+            return false;
+        }
+        catch (Exception e) {
             e.printStackTrace();
             return false;
         }

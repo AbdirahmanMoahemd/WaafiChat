@@ -35,7 +35,7 @@ public class MeActivity extends AppCompatActivity {
                 .getString("xmpp_jid",null);
 
         jid_text = findViewById(R.id.jid_text);
-        jid_text.setText(jid);
+        jid_text.setText(jid.split("@")[0]);
 
         String status;
         RoosterConnection connection = RoosterConnectionService.getConnection();

@@ -24,13 +24,15 @@ public class SplashActivity extends AppCompatActivity {
             {
                 Intent i = new Intent(SplashActivity.this,login_activity.class);
                 startActivity(i);
+                finish();
             }else
             {
                 Intent i = new Intent(SplashActivity.this,ChatListActivity.class);
                 startActivity(i);
+                finish();
 
             }
-            finish();
+
         },1000);
 
 

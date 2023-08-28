@@ -165,7 +165,11 @@ public class ContactList extends AppCompatActivity implements ContactListAdapter
                         ).show();
                     }
 
+
+
                 }
+                return true;
+
             } else if (R.id.delete_contact ==R.id.contact_details) {
                 Intent i = new Intent(ContactList.this,ContactDetailsActivity.class);
                 i.putExtra("contact_jid",contactJid);

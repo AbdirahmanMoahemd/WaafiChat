@@ -68,7 +68,6 @@ public class ChatView extends AppCompatActivity implements ChatMessagesAdapter.O
                 Intent intent = getIntent();
                 counterpartJid = intent.getStringExtra("contact_jid");
                 chatType = (Chat.ContactType)intent.getSerializableExtra("chat_type");
-                setTitle(counterpartJid);
                 toolbar =findViewById(R.id.toolbar);
                 setSupportActionBar(toolbar);
                 getSupportActionBar().setTitle(counterpartJid.split("@")[0]);

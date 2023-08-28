@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name=".ChatView"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".ChatListActivity" />
         <activity
             android:name=".ContactList"
@@ -37,9 +37,7 @@
             android:exported="false"></activity>
         <activity
             android:name=".ChatListActivity"
-            android:exported="true"/>
-
-
+            android:exported="false"/>
 
         <service android:name=".xmpp.RoosterConnectionService" />
 

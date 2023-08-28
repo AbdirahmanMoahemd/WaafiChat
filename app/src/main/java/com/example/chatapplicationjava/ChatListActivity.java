@@ -147,9 +147,10 @@ public class ChatListActivity extends AppCompatActivity implements ChatListAdapt
         }
         if( item.getItemId()  == R.id.reconnect)
         {
-
-            Intent i1 = new Intent(this, RoosterConnectionService.class);
+            Log.d("Reconnecting", "Reconnecting");
+            Intent i1 = new Intent(getApplicationContext(), RoosterConnectionService.class);
             startService(i1);
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -175,7 +176,7 @@ public class ChatListActivity extends AppCompatActivity implements ChatListAdapt
         //registering popup with OnMenuItemClickListener
         popup.setOnMenuItemClickListener(item -> {
 
-            if (item.getTitle() == "Delete Chat"){
+            if (item.getItemId() == R.id.delete_chat){
                 if(ChatModel.get(getApplicationContext()).deleteChat(chatUniqueId) )
                 {
                     mAdapter.onChatCountChange();
