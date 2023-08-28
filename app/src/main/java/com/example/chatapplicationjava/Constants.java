@@ -1,8 +1,5 @@
 package com.example.chatapplicationjava;
 
-/**
- * Created by gakwaya on 2018/1/11.
- */
 
 public class Constants {
     public static final class BroadCastMessages
