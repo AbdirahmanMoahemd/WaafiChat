@@ -230,6 +230,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
         }
         } catch (XmppStringprepException e) {
             e.printStackTrace();
+        }catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -324,6 +326,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
@@ -355,6 +359,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
         } catch (InterruptedException e) {
             e.printStackTrace();
             return false;
+        }catch (Exception e) {
+            e.printStackTrace();
         }
         return true;
     }
@@ -390,6 +396,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
         } catch (XmppStringprepException e) {
             e.printStackTrace();
             return false;
+        }catch (Exception e) {
+            e.printStackTrace();
         }
         Presence subscribe = new Presence(jidTo, Presence.Type.subscribe);
         if(sendPresense(subscribe))
@@ -409,6 +417,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
         } catch (XmppStringprepException e) {
             e.printStackTrace();
             return false;
+        }catch (Exception e) {
+            e.printStackTrace();
         }
         Presence unsubscribe = new Presence(jidTo, Presence.Type.unsubscribe);
         if(sendPresense(unsubscribe))
@@ -428,6 +438,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
         } catch (XmppStringprepException e) {
             e.printStackTrace();
             return false;
+        }catch (Exception e) {
+            e.printStackTrace();
         }
         Presence unsubscribed = new Presence(jidTo, Presence.Type.unsubscribed);
         if(sendPresense(unsubscribed))
@@ -448,6 +460,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
         } catch (XmppStringprepException e) {
             e.printStackTrace();
             return false;
+        }catch (Exception e) {
+            e.printStackTrace();
         }
         Presence subscribe = new Presence(jidTo, Presence.Type.subscribed);
         sendPresense(subscribe);
@@ -506,6 +520,8 @@ public class RoosterConnection implements ConnectionListener, SubscribeListener,
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 return false;
+            }catch (Exception e) {
+                e.printStackTrace();
             }
             return true;
         }

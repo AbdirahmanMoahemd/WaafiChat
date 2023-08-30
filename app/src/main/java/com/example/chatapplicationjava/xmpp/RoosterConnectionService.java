@@ -72,6 +72,8 @@ public class RoosterConnectionService extends Service {
             }
 
             e.printStackTrace();
+        }catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
